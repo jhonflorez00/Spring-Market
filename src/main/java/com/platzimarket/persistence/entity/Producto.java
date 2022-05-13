@@ -29,6 +29,9 @@ public class Producto {
     private Integer cantidadStock;
 
     private Boolean estado;
+    @ManyToMany
+
+    private Categoria categoria;
 
 
     public Integer getIdProducto() {
