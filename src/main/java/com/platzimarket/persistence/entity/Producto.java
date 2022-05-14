@@ -29,8 +29,12 @@ public class Producto {
     private Integer cantidadStock;
 
     private Boolean estado;
-    @ManyToMany
 
+    //@JoinColumn(name = "id_categoria",insertable = false,updatable = false)
+    //sirve para que no ingre o actulize nada desde esta clase no inserta y actualiza nada
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria",insertable = false,updatable = false)
     private Categoria categoria;
 
 
